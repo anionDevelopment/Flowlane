@@ -1,48 +1,40 @@
-Flowable (V6)
-========
+# Flowlane
 
-[Maven Central:  
-    ![Maven Central](https://maven-badges.herokuapp.com/maven-central/org.flowable/flowable-engine/badge.svg)](https://maven-badges.herokuapp.com/maven-central/org.flowable/flowable-engine)
+Flowlane is a community-maintained web user interface for the [Flowable](https://github.com/flowable/flowable-engine) process engine.
+It contains the applications Modeler, Task, Admin and IDM.
 
-[Docker Images:  
-    ![Docker Hub](https://shields.io/docker/pulls/flowable/flowable-ui)](https://hub.docker.com/u/flowable/)
+Flowlane is a fork of the Flowable UI applications of Flowable 6.8.0 (module `modules/flowable-ui` of the tag `flowable-6.8.0` of [flowable/flowable-engine](https://github.com/flowable/flowable-engine/tree/flowable-6.8.0/modules/flowable-ui)).
+Flowable discontinued these UI applications after version 6.8.0.
+Flowlane is not affiliated with or endorsed by Flowable AG.
+"Flowable" is used only to describe the origin of this project and the engine it works with.
 
-[License:  
-	![license](https://img.shields.io/hexpm/l/plug.svg)](https://github.com/flowable/flowable-engine/blob/master/LICENSE)
+## Status
 
-![Flowable Actions CI](https://github.com/flowable/flowable-engine/workflows/Flowable%20Main%20Build/badge.svg?branch=master)
+Flowlane is in an early state.
+It currently still embeds the Flowable engine libraries in version 6.8.0 (see the property `flowable.engine.version` in `pom.xml`).
+The goal is that Flowlane only contains the user interface and uses an externally hosted Flowable engine via its REST API.
 
-Homepage: https://www.flowable.org/
+## Prerequisites
 
-## flowable / flowəb(ə)l /
-* a compact and highly efficient workflow and Business Process Management (BPM) platform for developers, system admins and business users.
-* a lightning fast, tried and tested BPMN 2 process engine written in Java.  It is Apache 2.0 licensed open source, with a committed community.
-* can run embedded in a Java application, or as a service on a server, a cluster, and in the cloud.  It integrates perfectly with Spring.  With a rich Java and REST API, it is the ideal engine for orchestrating human or system activities.
+- A JDK (the build was tested with JDK 21; the original Flowable UI 6.8.0 supports JDK 8 or newer)
+- Maven (or the included Maven wrapper `mvnw`)
 
-## Introduction
+## Build
 
-### License
+```text
+mvnw -B install
+```
 
-Flowable is distributed under the Apache V2 license (http://www.apache.org/licenses/LICENSE-2.0.html).
+The runnable application is created in `flowlane-app/target`.
 
-### Download
+## Configuration
 
-The Flowable downloads can be found on https://www.flowable.org/downloads.html.
+The settings of Flowlane itself use the prefixes `flowlane.common.app`, `flowlane.admin.app`, `flowlane.idm.app`, `flowlane.task.app` and `flowlane.modeler.app`.
+Settings of the Flowable engine keep their original `flowable.` prefixes (for example `flowable.idm.ldap` or `flowable.mail.server`).
 
-### Sources
+## License
 
-The distribution contains most of the sources as jar files. The source code of Flowable can be found on https://github.com/flowable/flowable-engine.
-
-### JDK 8+
-
-Flowable runs on a JDK higher than or equal to version 8. Use the JDK packaged with your Linux distribution or go to [adoptium.net](https://adoptium.net/) and click on the *Latest LTS Release* button. There are installation instructions on that page as well. To verify that your installation was successful, run `java -version` on the command line. That should print the installed version of your JDK.
-
-### Contributing
-
-Contributing to Flowable: https://github.com/flowable/flowable-engine/wiki.
-
-### Reporting problems
-
-Every self-respecting developer should have read this link on how to ask smart questions: http://www.catb.org/~esr/faqs/smart-questions.html.
-
-After you've done that you can post questions and comments on https://forum.flowable.org and create issues in https://github.com/flowable/flowable-engine/issues.
+Flowlane is distributed under the Apache License 2.0, see [LICENSE](LICENSE).
+It is based on source code of the Flowable project, which is distributed under the same license.
+The source code of Flowable was modified for Flowlane, for example by renaming packages, artifacts, configuration keys and user interface texts.
+The origin and the modifications are listed in [NOTICE](NOTICE).

@@ -1,0 +1,6 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  de.aniondev.flowlane.common.security.FlowlaneSecurityAutoConfiguration,\
+  de.aniondev.flowlane.common.properties.FlowableRemoteIdmAutoConfiguration
+
+org.springframework.boot.env.EnvironmentPostProcessor=\
+  de.aniondev.flowlane.common.properties.BackwardsCompatiblePropertiesLoader

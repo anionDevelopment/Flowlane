@@ -1,0 +1,17 @@
+Flowlane
+Copyright of the modifications: the Flowlane contributors
+
+This product is based on the Flowable UI applications of Flowable 6.8.0
+(https://github.com/flowable/flowable-engine/tree/flowable-6.8.0/modules/flowable-ui),
+which are licensed under the Apache License, Version 2.0.
+Flowable is a trademark of Flowable AG. Flowlane is not affiliated with or endorsed by Flowable AG.
+
+The source code of Flowable was modified for Flowlane. Modifications include:
+- Removal of all parts of the flowable-engine repository except the UI applications.
+- Move of the UI applications from modules/flowable-ui to the root folder of the repository.
+- Renaming of the Maven coordinates from org.flowable:flowable-ui-* to de.aniondev.flowlane:flowlane-*.
+- Renaming of the Java packages from org.flowable.ui to de.aniondev.flowlane.
+- Renaming of classes (for example FlowableUiApplication to FlowlaneApplication).
+- Renaming of the configuration keys flowable.{common,admin,idm,task,modeler}.app to flowlane.{common,admin,idm,task,modeler}.app.
+- Renaming of user interface texts which refer to the UI applications from Flowable to Flowlane.
+- Pinning of the used Flowable engine libraries to version 6.8.0.

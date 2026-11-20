@@ -1,0 +1,3 @@
+
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+    de.aniondev.flowlane.modeler.conf.ApplicationConfiguration

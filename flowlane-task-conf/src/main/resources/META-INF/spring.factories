@@ -1,0 +1,8 @@
+org.springframework.boot.env.EnvironmentPostProcessor=\
+  de.aniondev.flowlane.task.conf.FlowableTaskDefaultPropertiesEnvironmentPostProcessor
+
+
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+    de.aniondev.flowlane.task.conf.ApplicationConfiguration,\
+    de.aniondev.flowlane.task.servlet.AppDispatcherServletConfiguration
+

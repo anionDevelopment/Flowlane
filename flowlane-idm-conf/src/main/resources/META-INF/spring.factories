@@ -1,0 +1,4 @@
+
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+    de.aniondev.flowlane.idm.conf.ApplicationConfiguration,\
+    de.aniondev.flowlane.idm.conf.KeycloakIdmAutoConfiguration
