@@ -29,7 +29,7 @@ if [ -z "$1" ]; then
 fi
 
 # Find english sources
-find ../../modules/ -path \*src/\*/i18n/en.json | while read en; do
+find ../../ -path \*src/\*/i18n/en.json | while read en; do
     lang=$1
     target=${en/en.json/$lang.json}
     echo -e "${LIGHTBLUE}Processing file '$target'${YELLOW}"
